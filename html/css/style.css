@@ -113,7 +113,6 @@ li {
   font-family: "Amelaryas", sans-serif;
   font-weight: bold;
   font-size: 16px;
-  cursor: pointer;
 }
 
 /* Style pour les liens au survol */
@@ -241,7 +240,6 @@ h3 {
   background-color: transparent;
   border: 2px solid white;
   color: white;
-  cursor: pointer;
 }
 
 .btn_card:hover {
@@ -713,11 +711,12 @@ p {
   position: relative;
 }
 
-.fa-arrow-right {
+.arrow i {
   position: absolute;
-  top: 65.6%;
-  left: 66%;
+  top: 71%;
+  left: 67%;
   font-size: 25px;
+  color: black;
 }
 
 /* Style du texte de l'attribut placeholder du champ de saisie */
