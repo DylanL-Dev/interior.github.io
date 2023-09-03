@@ -255,7 +255,7 @@ h3 {
   height: 50px;
   overflow: hidden;
   background-color: #fff0db;
-  transform: rotate(-deg);
+  transform: rotate(-1deg);
 }
 
 .annonce_content {
