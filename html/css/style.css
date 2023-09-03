@@ -1,0 +1,799 @@
+/* Réinitialisation des styles de base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::selection {
+  color: rgb(36, 36, 36);
+  background-color: #d9b99b;
+}
+
+html {
+  cursor: url("/html/image/logo/icons8-mouse-cursor-pointer-arrow-head-isolated-on-white-background-24.png"),
+    auto;
+  height: 100%;
+}
+
+ul li,
+#custom_cursor {
+  cursor: url("/html/image/logo/icons8-mouse-cursor-pointer-arrow-head-isolated-on-white-background-24.png"),
+    pointer;
+}
+
+body {
+  overflow-x: hidden; /* Annonces en mouvement avec rotation */
+  /* En raison de la rotation appliquée à la zone d'annonce, la barre de défilement horizontale peut apparaître
+     en cas de dépassement de contenu. Pour éviter cela, nous masquons la barre de défilement horizontale avec
+     "overflow-x: hidden". */
+}
+
+/* Scroll Barre */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e4d5b7 #DFE9EB;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #DFE9EB;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #e4d5b7;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #D9B99B;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #D9B99B;
+}
+
+
+/* End Scroll Barre*/
+
+/* Importation de police */
+@font-face {
+  font-family: "Amelaryas";
+  src: local("Amelaryas"), url("/html/font/Amelaryas.otf") format("opentype");
+}
+
+/* Style pour les images */
+img {
+  object-fit: cover;
+}
+
+/* Style pour la navigation */
+header {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+}
+
+.navbar_header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 25px;
+}
+
+.logo {
+  font-family: "Amelaryas", sans-serif;
+  font-size: 18px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row !important;
+}
+
+li {
+  margin: 0 15px !important;
+  font-family: "Amelaryas", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style pour les liens au survol */
+li:hover {
+  color: #d9b99b;
+}
+
+#header_icons i {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.offre {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.title_maj {
+  font-family: "Amelaryas", sans-serif;
+  max-width: 50%;
+  text-align: center;
+  line-height: 60px;
+}
+
+.color_special_title {
+  color: #5a7385;
+}
+
+.btn {
+  min-width: 15%;
+  height: 40px;
+  border-radius: 7px;
+  background-color: #fff0db;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+.container_img {
+  display: flex;
+  align-content: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 50px;
+}
+
+.card {
+  position: relative;
+  border-radius: 45px;
+  overflow: hidden;
+  width: 40%;
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.img1 {
+  width: 100%;
+  height: 400px;
+}
+
+.card_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card_overlay {
+  opacity: 1;
+}
+
+.card_overlay p,
+h3 {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: 100;
+}
+
+.card_overlay h3 {
+  font-size: 30px;
+}
+
+.btn_card {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  width: 120px;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+/* Annonces en mouvement */
+.zone-annonce {
+  position: relative;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  background-color: #fff0db;
+  transform: rotate(-deg);
+}
+
+.annonce_content {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 15px 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: black;
+  animation: move 30s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-60%);
+  }
+}
+
+.zone-annonce_2 {
+  position: relative;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  background-color: rgb(36, 36, 36);
+  transform: rotate(-3deg);
+}
+
+.annonce_content_2 {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 15px 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: white;
+  animation: move2 30s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes move2 {
+  0% {
+    transform: translateX(-60%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Conteneur d'images en présentation */
+.container_img_presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 200px; /* Réduit la marge supérieure */
+  width: 100%;
+  max-width: 1200px; /* Limite la largeur maximale du conteneur */
+  margin: 0 auto; /* Centre le conteneur horizontalement */
+  gap: 60px; /* Augmenté l'espacement entre les éléments */
+}
+
+.flex_image {
+  flex: 1;
+  overflow: hidden;
+  width: auto;
+  height: 250px;
+}
+
+.flex_image img {
+  width: 100%;
+  height: 100%; /* Utilise la hauteur disponible */
+}
+
+.flex_image1 {
+  border-radius: 35px 0 35px 35px;
+  width: 100%; /* Prend la largeur complète de son conteneur */
+}
+
+.flex_image2 {
+  border-radius: 0 35px 35px 0;
+  width: 100%;
+}
+
+.card_flex {
+  background-color: #fff0db;
+  width: 100%;
+  max-width: 350px; /* Limite la largeur de la carte */
+  margin: 0 auto; /* Centre la carte horizontalement */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  border-radius: 0 35px 0 35px;
+}
+
+.card_flex h2 {
+  font-size: 12px;
+  font-family: "Amelaryas", sans-serif;
+  line-height: 35px;
+  letter-spacing: 2px;
+}
+
+.align_text,
+p {
+  text-align: left;
+  font-size: 14px;
+  padding-top: 30px;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  line-height: 23px;
+}
+
+/* Conteneur de confort */
+.container_confort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10%;
+  margin: 0 auto; /* Centre le contenu horizontalement */
+}
+
+.confort_flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 120px;
+}
+
+.confort_flex h1 {
+  font-family: "Amelaryas", sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  max-width: 90%;
+}
+
+.confort_flex p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  max-width: 60%;
+}
+
+.confort_flex .btn_confort {
+  margin-top: 30px;
+  min-width: 15%;
+  height: 40px;
+  border-radius: 7px;
+  background-color: #fff0db;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.btn_confort:hover {
+  transform: scale(1.2);
+}
+
+.image_confort {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.image_confort img {
+  width: 100%;
+  height: 800px;
+  border-radius: 35px 0 0 35px;
+}
+
+/* Utilisation de max-width au lieu de hauteur fixe pour s'adapter aux écrans */
+.image_confort img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 35px 0 0 35px;
+}
+
+.img_horizontal {
+  padding-top: 6%;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  gap: 10px;
+}
+
+.img_horizontal_longue img {
+  max-width: 100%;
+  height: 400px;
+  border-radius: 40px;
+}
+
+.img_horizontal_large img {
+  max-width: 100%;
+  height: 400px;
+  border-radius: 55px 0 55px 0;
+}
+
+.container_card_slogant {
+  margin-top: 120px;
+  width: 100%;
+  height: 1100px;
+  background-color: #fff0db;
+  border-radius: 50px 50px 0 0;
+}
+
+.card_slogant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+.card_slogant h2 {
+  width: 70%;
+  font-size: 24px;
+  font-family: "Amelaryas", sans-serif;
+  text-align: center;
+  line-height: 60px;
+}
+
+.card_slogant h2 p {
+  font-size: 24px;
+  font-family: "Amelaryas", sans-serif;
+  text-align: center;
+  line-height: 60px;
+}
+
+.card_slogant img {
+  margin-top: 80px;
+  width: 100%;
+  height: 600px;
+  border-radius: 35px 35px 20% 20%;
+  border: white solid 3px;
+}
+
+.text_carrousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.text_carrousel h2 {
+  font-family: "Amelaryas", sans-serif;
+  text-align: center;
+  line-height: 75px;
+  font-size: 24px;
+  max-width: 55%;
+}
+
+.text_carrousel span {
+  color: #d9b99b;
+}
+
+.carrousel_slider {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 1));
+  }
+}
+
+/* Styling */
+.slider img {
+  background: white;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+  border-radius: 20px;
+}
+
+.slide-track {
+  animation: scroll 15s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slide {
+  height: 100px;
+  width: 250px;
+}
+
+/*barre de la partie vision*/
+.vison {
+  position: relative;
+}
+
+.container_barre {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 60px;
+  padding-top: 260px;
+  gap: 12px;
+}
+
+.barre {
+  width: 30px;
+  height: 5px;
+  margin-top: 30px;
+  background-color: #49796b;
+}
+
+.container_barre p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+/* Style de la section "container_cration" */
+.container_cration {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 62px;
+  padding-top: 300px;
+  padding-right: 50px;
+}
+
+/* Style des titres à l'intérieur de "container_cration" */
+.container_cration h2 {
+  width: 35%;
+  padding-left: 55px;
+  font-size: 32px;
+  font-family: "Amelaryas", sans-serif;
+  line-height: 70px;
+}
+
+/* Style des images à l'intérieur de "container_cration" */
+.container_cration img {
+  width: 30%;
+  height: 300px;
+  border-radius: 55px 0 55px 0;
+}
+
+/* Style de la classe "text_mini" à l'intérieur de "container_cration" */
+.container_cration .text_mini {
+  position: absolute;
+  left: 70%;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  width: 27%;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+/* Style de la section "btn_vsion_contact" */
+.btn_vsion_contact {
+  position: relative;
+}
+
+/* Style du bouton à l'intérieur de "btn_vsion_contact" */
+.btn_vsion_contact button {
+  position: absolute;
+  bottom: 25px;
+  left: 75%;
+  min-width: 15%;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 4px solid #fff0db;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Effet au survol du bouton */
+.btn_vsion_contact button:hover {
+  transform: scale(1.2);
+}
+
+/* Style de la section "container_contact" */
+.container_contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+}
+
+/* Style de l'image à l'intérieur de "container_contact" */
+.container_contact img {
+  border-radius: 50px;
+  width: 80%;
+}
+
+/* Style de la classe "Contact" à l'intérieur de "container_contact" */
+.Contact {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8%;
+  margin-top: 28%;
+  width: 80%;
+  height: 385px;
+  background-color: #e0ffcd;
+  border-radius: 50px;
+}
+
+/* Style des titres et du texte à l'intérieur de "Contact" */
+.Contact h2 {
+  font-family: "Amelaryas", sans-serif;
+  font-size: 25px;
+}
+
+.Contact p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Style du champ de saisie à l'intérieur de "Contact" */
+.Contact input {
+  width: 40%;
+  height: 55px;
+  border-radius: 35px;
+  border: black solid 1px;
+  padding-left: 25px;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+}
+
+.fa-arrow-right {
+  position: absolute;
+  top: 65.6%;
+  left: 66%;
+  font-size: 25px;
+}
+
+/* Style du texte de l'attribut placeholder du champ de saisie */
+.Contact input::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.711);
+}
+
+/* Style pour le footer */
+footer {
+  margin-top: 100px;
+}
+/* Style pour les éléments du footer */
+.container_background_footer {
+  padding: 20px 0;
+  background-color: #f8f8f8;
+  padding: 30px 0;
+}
+
+.menu_footer {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about {
+  flex: 1;
+  text-align: left;
+  padding-right: 400px; /* Espace entre la div "about" et la navigation */
+}
+
+.logo_footer {
+  color: #d9b99b;
+  font-size: 30px;
+  font-family: "Amelaryas", sans-serif;
+}
+/* Style pour la navigation */
+.nav_column {
+  display: flex;
+  flex: 2; /* Utilise 2/3 de l'espace disponible */
+}
+
+.nav_column ul {
+  list-style: none;
+  padding: 0;
+  flex-direction: column !important;
+  flex: 1; /* Prend autant d'espace que possible */
+  margin-right: 20px; /* Espace entre les deux colonnes */
+}
+
+.nav_column ul li {
+  margin: 15px 0 !important;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+}
+
+/* Style pour les ul en colonnes */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column .title_bold {
+  font-size: 20px;
+}
+
+/* Style pour les liens du footer */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Copyright */
+
+.copyright {
+  background-color: #e4e4e4;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
