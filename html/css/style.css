@@ -1,21 +1,20 @@
 /* Réinitialisation des styles de base */
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 ::selection {
   color: rgb(36, 36, 36);
   background-color: #d9b99b;
+
 }
 
 html {
   cursor: url("/html/image/logo/icons8-mouse-cursor-pointer-arrow-head-isolated-on-white-background-24.png"),
     auto;
   height: 100%;
-
   scroll-behavior: smooth;
 }
 
@@ -30,6 +29,7 @@ body {
   /* En raison de la rotation appliquée à la zone d'annonce, la barre de défilement horizontale peut apparaître
      en cas de dépassement de contenu. Pour éviter cela, nous masquons la barre de défilement horizontale avec
      "overflow-x: hidden". */
+
 }
 
 /* Scroll Barre */
