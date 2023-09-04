@@ -93,7 +93,6 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   margin: 25px;
 }
 
@@ -809,4 +808,171 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Version Tablette */
+
+/* Media query pour les écrans jusqu'à 1114px de largeur (par exemple, Microsoft Surface Duo) */
+
+@media screen and (max-width: 1114px) {
+  .logo {
+    padding-left: 35px;
+  }
+
+  .fa-cart-shopping {
+    padding-right: 25px;
+  }
+
+  /* Réduire la largeur maximale des éléments ayant la classe "title_maj" pour s'adapter à l'écran */
+  .title_maj {
+    max-width: 100%;
+  }
+
+  /* Réajuster la marge et la largeur des boutons */
+  .btn {
+    margin-left: 38.5%; /* Centrer horizontalement */
+    margin-right: 38.5%;
+    min-width: 23%; /* Ajuster la largeur minimale */
+    cursor: none; /* Définir le curseur en tant que pointeur */
+    transform: none; /* Annuler toute transformation au survol */
+    transition: none; /* Annuler toute transition au survol */
+  }
+
+  /* Au survol, aucune transformation supplémentaire n'est appliquée */
+  .btn:hover {
+    transform: none;
+  }
+
+  .card_overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+
+    padding: 0px;
+    opacity: 1;
+    transition: none;
+  }
+
+  .card:hover .card_overlay {
+    opacity: 1;
+    cursor: none;
+  }
+
+  .card {
+    position: relative;
+    border-radius: 45px;
+    overflow: hidden;
+    width: 40%;
+  }
+  .zone-annonce_2 {
+    transform: rotate(-2deg);
+  }
+  .zone-annonce {
+    transform: rotate(2deg);
+  }
+  .container_img_presentation {
+    gap: 30px;
+  }
+
+  .confort_flex {
+    padding-left: 40px;
+  }
+
+  .img_horizontal {
+    padding-top: 15%;
+  }
+
+  .card_slogant h2 {
+    width: 85%;
+    font-size: 20px;
+  }
+  .card_slogant h2 p {
+    font-size: 20px;
+  }
+
+  .card_slogant img {
+    height: 400px;
+  }
+
+  .container_card_slogant {
+    margin-top: 120px;
+    width: 100%;
+    height: 950px;
+    background-color: #fff0db;
+    border-radius: 50px 50px 0 0;
+  }
+
+  .text_carrousel h2 {
+    font-size: 20px;
+    max-width: 90%;
+  }
+
+  .container_cration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 300px;
+    padding-right: 0px;
+  }
+
+  .container_cration h2 {
+    text-align: center;
+    width: 50%;
+    font-size: 20px;
+    line-height: 50px;
+  }
+
+  .container_cration img {
+    width: 50%;
+    padding-right: 300px;
+    padding-top: 20px;
+  }
+  .container_cration .text_mini {
+    left: 60%;
+    top: 60%;
+    width: 30%;
+    font-size: 14px;
+    text-align: right;
+    letter-spacing: 0.5px;
+  }
+
+  .btn_vsion_contact button {
+    position: absolute;
+    bottom: 0px;
+    left: 82%;
+    min-width: 15%;
+    height: 50px;
+    cursor: none;
+  }
+
+  .Contact {
+    gap: 2%;
+    margin-top: 28%;
+    width: 80%;
+    height: 250px;
+  }
+
+  .Contact h2 {
+    padding-top: 15px;
+    font-size: 16px;
+  }
+
+  .Contact input {
+    width: 50%;
+  }
+
+  .fa-arrow-right {
+    padding-top: 12px;
+    padding-left: 20px;
+  }
+
+  .about {
+    padding-right: 180px;
+  }
+}
+
+/* Version Mobile */
+@media screen and (max-width: 768px) {
+  /* styles CSS pour les écrans jusqu'à 768px de largeur ici */
 }
