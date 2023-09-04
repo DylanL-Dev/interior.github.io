@@ -151,6 +151,11 @@ li:hover {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 42.5%;
+  margin-right: 42.5%;
   min-width: 15%;
   height: 40px;
   border-radius: 7px;
@@ -255,7 +260,7 @@ h3 {
   height: 50px;
   overflow: hidden;
   background-color: #fff0db;
-  transform: rotate(-1deg);
+  transform: rotate(1.5deg);
 }
 
 .annonce_content {
@@ -288,7 +293,7 @@ h3 {
   height: 50px;
   overflow: hidden;
   background-color: rgb(36, 36, 36);
-  transform: rotate(-3deg);
+  transform: rotate(-1.5deg);
 }
 
 .annonce_content_2 {
@@ -383,7 +388,6 @@ p {
   align-items: center;
   justify-content: space-between;
   padding-top: 10%;
-  margin: 0 auto; /* Centre le contenu horizontalement */
 }
 
 .confort_flex {
@@ -391,6 +395,7 @@ p {
   flex-direction: column;
   align-items: flex-start;
   padding-left: 120px;
+  position: relative;
 }
 
 .confort_flex h1 {
@@ -408,8 +413,12 @@ p {
   max-width: 60%;
 }
 
-.confort_flex .btn_confort {
-  margin-top: 30px;
+.btn_confort {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
   min-width: 15%;
   height: 40px;
   border-radius: 7px;
@@ -417,7 +426,7 @@ p {
   border: none;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
   transform: scale(1);
   transition: transform 0.4s ease-in-out;
