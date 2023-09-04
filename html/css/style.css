@@ -810,6 +810,50 @@ a {
   justify-content: center;
 }
 
+/* Styles pour la version desktop (écrans de plus de 1114px de largeur) */
+@media screen and (min-width: 1115px) {
+  .preloader {
+      display: none; /* Masquer le préchargeur sur la version desktop */
+  }
+}
+
+/* Styles pour la version mobile et tablette (écrans de 1114px ou moins de largeur) */
+@media screen and (max-width: 1114px) {
+  .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      animation: loader 3s ease forwards;
+      opacity: 1; /* Assurez-vous que l'élément est visible au début */
+  }
+
+  /* Reste du CSS pour la version mobile/tablette */
+  #preloader-video {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+  }
+
+  /* Animation pour masquer le préchargeur après 3 secondes */
+  @keyframes loader {
+      0% {
+          opacity: 1;
+      }
+
+      100% {
+          opacity: 0; /* Réduire l'opacité à 0% pour le masquer */
+      }
+  }
+}
+
+
 /* Version Tablette */
 
 /* Media query pour les écrans jusqu'à 1114px de largeur (par exemple, Microsoft Surface Duo) */
