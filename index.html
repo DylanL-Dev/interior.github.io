@@ -39,11 +39,48 @@
         </section>
       </nav>
     </section>
+    <section>
+      <section>
+        <!-- Barre de navigation mobile -->
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            ><i class="fa-solid fa-arrow-left"></i
+          ></a>
+          <div class="overlay-content">
+            <a href="#">Accueil</a>
+            <a href="#">Shop</a>
+            <a href="#">Produit</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="container_nav">
+          <h1 class="logo">Interior</h1>
+          <span
+            class="burger"
+            style="font-size: 30px; cursor: pointer"
+            onclick="openNav()"
+          >
+            <i class="fas fa-bars"></i>
+          </span>
+        </div>
+
+        <script defer>
+          function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+          }
+
+          function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+          }
+        </script>
+      </section>
+    </section>
   </header>
   <body>
+    <!-- Preloader mobile -->
     <div class="preloader">
       <video autoplay muted loop id="preloader-video">
-        <source src="html/video/cart_loader.mp4" type="video/mp4">
+        <source src="html/video/cart_loader.mp4" type="video/mp4" />
       </video>
     </div>
     <main>
@@ -94,8 +131,9 @@
           <div class="card_overlay">
             <p>
               Laissez-vous enchanter par des espaces où le style rencontre le
-              confort, créant ainsi le parfait équilibre pour votre évasion
-              nocturne
+              confort, créant ainsi le parfait équilibre .container_confort {
+              display: flex; align-items: center; justify-content:
+              space-between; padding-top: 10%; }pour votre évasion nocturne
             </p>
             <h3>Chambre & confort</h3>
             <a href="#">
@@ -214,12 +252,9 @@
               de sérénité, nous faisons du confort exceptionnel votre quotidien.
             </p>
             <a href="#"
-            ><div class="btn_confort" id="custom_cursor">
-              Explorez
-            </div></a
-          >
+              ><div class="btn_confort" id="custom_cursor">Explorez</div></a
+            >
           </div>
-          
 
           <div class="image_confort">
             <img
@@ -416,6 +451,7 @@
         </div>
         <div class="container_cration">
           <h2>Nous concevons & créons des meubles élégants</h2>
+
           <img
             src="html/image/tavolo-da-pranzo-ovale-con-piano-in-marmo-carrara-made-in-italy-nerone-1_resultat.webp"
             alt=""
