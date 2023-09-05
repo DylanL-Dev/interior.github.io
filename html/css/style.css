@@ -540,6 +540,7 @@ p {
   display: flex;
   justify-content: center;
   padding-top: 100px;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 /* Animation */
@@ -548,30 +549,37 @@ p {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 1));
+    transform: translateX(
+      calc(-275px * 12)
+    ); /* Ajustez le nombre d'images ici et l'espace souhaité (275px dans cet exemple) */
   }
 }
 
 /* Styling */
-.slider img {
-  background: white;
-  height: 300px;
-  margin: auto;
+.slider {
+  width: 100%; /* Ajuste la largeur du slider */
   overflow: hidden;
-  position: relative;
-  width: 90%;
-  border-radius: 20px;
 }
 
 .slide-track {
-  animation: scroll 15s linear infinite;
+  animation: scroll 60s linear infinite;
   display: flex;
-  width: calc(250px * 14);
+  width: calc(
+    (250px + 25px) * 12
+  ); /* Ajustez le nombre d'images ici et l'espace souhaité (25px dans cet exemple) */
 }
 
 .slide {
-  height: 100px;
+  height: 400px;
   width: 250px;
+  margin-right: 25px; /* Espace entre les images (25px dans cet exemple) */
+}
+
+.slide img {
+  height: 400px;
+  width: 100%; /* Remplissez la largeur du conteneur parent */
+  object-fit: cover; /* Ajustez le comportement d'ajustement */
+  border-radius: 20px;
 }
 
 /*barre de la partie vision*/
@@ -832,6 +840,12 @@ a {
 /* Media query pour les écrans jusqu'à 1114px de largeur (par exemple, Microsoft Surface Duo) */
 
 @media screen and (max-width: 1114px) {
+  body {
+    overflow-x: hidden; /* Annonces en mouvement avec rotation */
+    /* En raison de la rotation appliquée à la zone d'annonce, la barre de défilement horizontale peut apparaître
+       en cas de dépassement de contenu. Pour éviter cela, nous masquons la barre de défilement horizontale avec
+       "overflow-x: hidden". */
+  }
   .preloader {
     position: fixed;
     top: 0;
@@ -1033,7 +1047,12 @@ a {
 /* Version Mobile */
 @media screen and (max-width: 768px) {
   /* styles CSS pour les écrans jusqu'à 768px de largeur ici */
-
+  body {
+    overflow-x: hidden; /* Annonces en mouvement avec rotation */
+    /* En raison de la rotation appliquée à la zone d'annonce, la barre de défilement horizontale peut apparaître
+       en cas de dépassement de contenu. Pour éviter cela, nous masquons la barre de défilement horizontale avec
+       "overflow-x: hidden". */
+  }
   .navbar_header {
     display: none;
   }
@@ -1096,6 +1115,12 @@ a {
   }
 
   @media screen and (max-height: 450px) {
+    body {
+      overflow-x: hidden; /* Annonces en mouvement avec rotation */
+      /* En raison de la rotation appliquée à la zone d'annonce, la barre de défilement horizontale peut apparaître
+         en cas de dépassement de contenu. Pour éviter cela, nous masquons la barre de défilement horizontale avec
+         "overflow-x: hidden". */
+    }
     .overlay a {
       font-size: 20px;
     }
@@ -1233,6 +1258,9 @@ a {
     max-width: 95%;
     line-height: 45px;
   }
+  .carrousel_slider{
+    display: none;
+  }
 
   .container_barre {
     position: absolute;
@@ -1241,12 +1269,24 @@ a {
     left: 20px;
     padding-top: 230px;
     gap: 12px;
+    display: none;
+  }
+  .img_horizontal_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 16px;
+    width: 90%;
+    gap: 20px;
   }
 
   .container_cration {
     justify-content: center;
     padding-right: 0px;
     width: 95%;
+    display: none;
   }
 
   .container_cration h2 {
@@ -1279,20 +1319,20 @@ a {
     display: none;
   }
   .container_contact {
-    padding-top: 230px;
+    padding-top: 80px;
   }
   .container_contact img {
     border-radius: 50px;
-    height: 300px;
+    height: 250px;
     width: 95%;
   }
 
   .Contact {
-    bottom: 5%;
+    bottom: 0%;
     gap: 2%;
-    top: 50%;
+    top: 30%;
     width: 95%;
-    height: 180px;
+    height: 190px;
   }
 
   .Contact h2 {
@@ -1313,7 +1353,7 @@ a {
 
   .arrow i {
     position: absolute;
-    top: 69%;
+    top: 67.5%;
     left: 67%;
     font-size: 25px;
     color: rgba(0, 0, 0, 0.719);
@@ -1327,9 +1367,8 @@ a {
     flex-direction: column;
   }
   .about {
-    width: 90%;
+    padding-right: 0px;
   }
-
   .copyright {
     height: 60px;
   }
