@@ -819,6 +819,10 @@ a {
   .burger {
     display: none;
   }
+
+  .container_nav {
+    display: none;
+  }
 }
 
 /* Styles pour la version mobile et tablette (écrans de 1114px ou moins de largeur) */
@@ -862,6 +866,10 @@ a {
   }
 
   .burger {
+    display: none;
+  }
+
+  .container_nav {
     display: none;
   }
 
@@ -1169,10 +1177,8 @@ a {
   }
 
   .confort_flex h1 {
-   
     font-size: 22px;
-
-}
+  }
   .confort_flex p {
     max-width: 100%;
   }
