@@ -19,9 +19,9 @@ html {
 }
 
 ul li,
-#custom_cursor {
+.custom_cursor {
   cursor: url("/html/image/logo/icons8-mouse-cursor-pointer-arrow-head-isolated-on-white-background-24.png"),
-    pointer;
+    pointer !important;
 }
 
 body {
@@ -81,6 +81,7 @@ a {
 @font-face {
   font-family: "Amelaryas";
   src: local("Amelaryas"), url("/html/font/Amelaryas.otf") format("opentype");
+  font-display: swap;
 }
 
 /* Style pour les images */

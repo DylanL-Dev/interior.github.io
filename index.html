@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="preloader"
+      href="html/font/Amelaryas.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link
       rel="stylesheet"
       href="html/css/node_modules/normalize.css/normalize.css"
     />
@@ -16,65 +23,56 @@
     ></script>
     <title>Interior</title>
   </head>
-  <header>
-    <!-- Barre de navigation -->
-    <section>
-      <nav class="navbar_header">
-        <div class="logo">
-          <h1>Interior</h1>
-        </div>
-        <section>
-          <ul>
-            <li>Accueil</li>
-            <li>Shop</li>
-            <li>Produit</li>
-            <li>Contact</li>
-          </ul>
-        </section>
-        <section id="custom_cursor" id="header_icons">
-          <ul>
-            <li><i class="fa-solid fa-heart"></i></li>
-            <li><i class="fa-solid fa-cart-shopping"></i></li>
-          </ul>
-        </section>
-      </nav>
-      <section>
-        <!-- Barre de navigation mobile -->
-        <div id="myNav_mobile" class="overlay">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-            ><i class="fa-solid fa-arrow-left"></i
-          ></a>
-          <div class="overlay-content">
-            <a href="#">Accueil</a>
-            <a href="#">Shop</a>
-            <a href="#">Produit</a>
-            <a href="#">Contact</a>
-          </div>
-        </div>
-        <div class="container_nav">
-          <h1 class="logo">Interior</h1>
-          <span
-            class="burger"
-            style="font-size: 30px; cursor: pointer"
-            onclick="openNav()"
-          >
-            <i class="fas fa-bars"></i>
-          </span>
-        </div>
 
-        <script defer>
-          function openNav() {
-            document.getElementById("myNav_mobile").style.width = "100%";
-          }
-
-          function closeNav() {
-            document.getElementById("myNav_mobile").style.width = "0%";
-          }
-        </script>
-      </section>
-    </section>
-  </header>
   <body>
+    <header>
+      <!-- Barre de navigation -->
+      <section>
+        <nav class="navbar_header">
+          <div class="logo">
+            <h1>Interior</h1>
+          </div>
+          <section>
+            <ul>
+              <li>Accueil</li>
+              <li>Shop</li>
+              <li>Produit</li>
+              <li>Contact</li>
+            </ul>
+          </section>
+          <section class="custom_cursor" id="header_icons">
+            <ul>
+              <li><i class="fa-solid fa-heart custom_cursor"></i></li>
+              <li><i class="fa-solid fa-cart-shopping custom_cursor"></i></li>
+            </ul>
+          </section>
+        </nav>
+        <section>
+          <!-- Barre de navigation mobile -->
+          <div id="myNav_mobile" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              ><i class="fa-solid fa-arrow-left"></i
+            ></a>
+            <div class="overlay-content">
+              <a href="#">Accueil</a>
+              <a href="#">Shop</a>
+              <a href="#">Produit</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+          <div class="container_nav">
+            <h1 class="logo">Interior</h1>
+            <span
+              class="burger"
+              style="font-size: 30px; cursor: pointer"
+              onclick="openNav()"
+            >
+              <i class="fas fa-bars custom_cursor"></i>
+            </span>
+          </div>
+        </section>
+      </section>
+    </header>
     <!-- Preloader mobile -->
     <div class="preloader">
       <video autoplay muted loop id="preloader-video">
@@ -91,7 +89,7 @@
         </h1>
       </div>
       <a href="#">
-        <button class="btn" id="custom_cursor" type="button">
+        <button class="btn custom_cursor" type="button">
           Explorez avec nous
         </button></a
       >
@@ -113,7 +111,7 @@
             </p>
             <h3>Splendeur Salon</h3>
             <a href="#">
-              <button type="button" id="custom_cursor" class="btn_card">
+              <button type="button " class="btn_card custom_cursor">
                 Voir plus
               </button></a
             >
@@ -124,7 +122,7 @@
           <img
             class="img1"
             src="https://img.freepik.com/photos-gratuite/interieur-chambre-chambre-hotel_23-2150683431.jpg?w=1060&t=st=1693229917~exp=1693230517~hmac=55a437995ef7fefe53705da927e9f2e4e5d5a1c1bb34748c27b82fe49af0d919"
-            alt=""
+            alt="interieur d'une chambre chambre hotel"
           />
           <div class="card_overlay">
             <p>
@@ -134,7 +132,7 @@
             </p>
             <h3>Chambre & confort</h3>
             <a href="#">
-              <button type="button" id="custom_cursor" class="btn_card">
+              <button type="button" class="btn_card custom_cursor">
                 Voir plus
               </button></a
             >
@@ -145,7 +143,7 @@
           <img
             class="img1"
             src="html/image/7-salle-de-bain-beige-verre-et-bois-marazzi_resultat.webp"
-            alt=""
+            alt="salle de bain beige en verre et en bois marazzi"
           />
           <div class="card_overlay">
             <p>
@@ -155,7 +153,7 @@
             </p>
             <h3>Salle de Bain Raffinée</h3>
             <a href="#">
-              <button type="button" id="custom_cursor" class="btn_card">
+              <button type="button" class="btn_card custom_cursor">
                 Voir plus
               </button></a
             >
@@ -166,7 +164,7 @@
           <img
             class="img1"
             src="html/image/23824652-interieur-de-moderne-vivant-piece-avec-beige-des-murs-en-bois-sol-beige-canape-et-cafe-tableau-ai-genere-gratuit-photo_resultat.webp"
-            alt=""
+            alt="interieur moderne et vivant, piece-avec des murs beige en bois et sol beige avec canape"
           />
           <div class="card_overlay">
             <p>
@@ -176,7 +174,7 @@
             </p>
             <h3>Design Intérieur</h3>
             <a href="#">
-              <button type="button" id="custom_cursor" class="btn_card">
+              <button type="button" class="btn_card custom_cursor">
                 Voir plus
               </button></a
             >
@@ -217,7 +215,7 @@
             <img
               class="flex_image1"
               src="html/image/12ecdff127b5b5636017bb06670a8837_resultat.webp"
-              alt="Image 1"
+              alt="Salon moderne"
             />
           </div>
           <div class="flex_image card_flex">
@@ -233,7 +231,7 @@
             <img
               class="flex_image2"
               src="html/image/3147edba19663e0180ef49e77f2dff13_resultat.webp"
-              alt="Image 3"
+              alt="Salon moderne avec luminaire au plafond"
             />
           </div>
         </div>
@@ -249,14 +247,14 @@
               de sérénité, nous faisons du confort exceptionnel votre quotidien.
             </p>
             <a href="#"
-              ><div class="btn_confort" id="custom_cursor">Explorez</div></a
+              ><div class="btn_confort custom_cursor">Explorez</div></a
             >
           </div>
 
           <div class="image_confort">
             <img
               src="html/image/ai-genere-entree-style-moderne_resultat.webp"
-              alt="Confort Image"
+              alt="entree style moderne"
             />
           </div>
         </div>
@@ -267,40 +265,40 @@
           <div class="img_horizontal_longue">
             <img
               src="https://img.freepik.com/photos-gratuite/design-interieur-incroyable-minimal_23-2150534567.jpg?w=360&t=st=1693237753~exp=1693238353~hmac=304dde3387897e023a77aee933a380d92100b1e430864247748168bbbdbb14ee"
-              alt=""
+              alt="Conception intérieure élégante minimale."
             />
           </div>
 
           <div class="img_horizontal_large">
             <img
               src="https://img.freepik.com/photos-gratuite/petite-entree-style-moderne_23-2150713079.jpg?w=1060&t=st=1693235359~exp=1693235959~hmac=79f8e187a3fa00abfea71b630176659d6c8f6b8f2057f8893465b28bee92e1f7"
-              alt=""
+              alt="Petite entree style moderne"
             />
           </div>
 
           <div class="img_horizontal_longue">
             <img
               src="https://img.freepik.com/photos-gratuite/petite-entree-style-moderne_23-2150712913.jpg?w=360&t=st=1693237538~exp=1693238138~hmac=83456b18fc528463d91345be466169ba3aaacaadd13b9ae588a4228534c8e9f9"
-              alt=""
+              alt="Conception intérieure minimaliste et élégante"
             />
           </div>
 
           <div class="img_horizontal_longue">
             <img
               src="https://img.freepik.com/photos-gratuite/view-of-room-with-furniture-in-beige-monochrome-palette_23-2150635145.jpg?t=st=1693237686~exp=1693238286~hmac=3e1502188cd75696ea41e49a2ddf756112c45af2c0cb9a05f4554be9349aa9b8"
-              alt=""
+              alt="Vue de la chambre avec meuble en beige monochrome"
             />
           </div>
           <div class="img_horizontal_large">
             <img
               src="https://img.freepik.com/photos-gratuite/petite-entree-style-moderne_23-2150712947.jpg?w=1060&t=st=1693237603~exp=1693238203~hmac=0f99033faea4f8fc9f49fa83fbeba665f3010eacad9614be6ec24544047f0c2b"
-              alt=""
+              alt="Petite entree style moderne"
             />
           </div>
           <div class="img_horizontal_longue">
             <img
               src="https://img.freepik.com/photos-gratuite/entree-style-moderne_23-2150695829.jpg?w=360&t=st=1693237730~exp=1693238330~hmac=4eb3614e8e0720ac7efc06a667bb2a9b28248a89f2c8824d3704a0ab3d5a0913"
-              alt=""
+              alt="Entree style moderne"
             />
           </div>
         </div>
@@ -322,7 +320,7 @@
             <!-- Image associée au slogan -->
             <img
               src="html/image/5d0cb1_7b4f4f7ea78e4ed6bc28352d31093cdf~mv2_resultat.webp"
-              alt=""
+              alt="Salon luxueux"
             />
           </div>
         </div>
@@ -353,7 +351,7 @@
                   src="html/image/2025892_w4000h2250c1cx2047cy2888cxt0cyt0cxb4000cyb5333_resultat.webp"
                   height="100"
                   width="250"
-                  alt=""
+                  alt="Chambre avec un grand lit"
                 />
               </div>
               <div class="slide">
@@ -361,7 +359,7 @@
                   src="html/image/1-japandi-grand-bain_resultat.webp"
                   height="100"
                   width="250"
-                  alt=""
+                  alt="Salle de bain style élégante"
                 />
               </div>
               <div class="slide">
@@ -369,7 +367,7 @@
                   src="html/image/1_resultat.webp"
                   height="100"
                   width="250"
-                  alt=""
+                  alt="Salon avec un billard"
                 />
               </div>
               <div class="slide">
@@ -377,7 +375,7 @@
                   src="html/image/AtlasConcorde_BoostNatural_010_01_Ecru-Umber_resultat.webp"
                   height="100"
                   width="250"
-                  alt=""
+                  alt="Cuisine moderne"
                 />
               </div>
               <div class="slide">
@@ -385,7 +383,7 @@
                   src="html/image/design-interieur-deco-elegant-beige_1_resultat.webp"
                   height="100"
                   width="250"
-                  alt=""
+                  alt="interieur avec une deco elegant de couleur beige"
                 />
               </div>
               <div class="slide">
@@ -393,7 +391,7 @@
                   src="html/image/Le-dressing-discret_resultat.webp"
                   height="100"
                   width="250"
-                  alt=""
+                  alt="dressing"
                 />
               </div>
               <div class="slide">
@@ -401,7 +399,7 @@
                   src="html/image/2025892_w4000h2250c1cx2047cy2888cxt0cyt0cxb4000cyb5333_resultat.webp"
                   height="100"
                   width="250"
-                  alt=""
+                  alt="Canapé avec table et pot de fleurs ambiance moderne"
                 />
               </div>
               <div class="slide">
@@ -409,7 +407,7 @@
                   src="html/image/1-japandi-grand-bain_resultat.webp"
                   height="100"
                   width="250"
-                  alt=""
+                  alt="Salle de bain style élégante"
                 />
               </div>
               <div class="slide">
@@ -417,7 +415,7 @@
                   src="html/image/1_resultat.webp"
                   height="100"
                   width="250"
-                  alt=""
+                  alt="Salon avec un billard"
                 />
               </div>
               <div class="slide">
@@ -425,7 +423,7 @@
                   src="html/image/AtlasConcorde_BoostNatural_010_01_Ecru-Umber_resultat.webp"
                   height="100"
                   width="250"
-                  alt=""
+                  alt="Cuisine moderne"
                 />
               </div>
               <div class="slide">
@@ -433,7 +431,7 @@
                   src="html/image/design-interieur-deco-elegant-beige_1_resultat.webp"
                   height="100"
                   width="250"
-                  alt=""
+                  alt="Design d'interieur et deco elegant beige"
                 />
               </div>
             </div>
@@ -451,7 +449,7 @@
 
           <img
             src="html/image/tavolo-da-pranzo-ovale-con-piano-in-marmo-carrara-made-in-italy-nerone-1_resultat.webp"
-            alt=""
+            alt="Table blanche moderne avec chaise noire"
           />
 
           <h2 class="text_mini">
@@ -461,20 +459,23 @@
         </div>
         <div class="btn_vsion_contact">
           <a href="#"
-            ><button id="custom_cursor" type="button">Contact</button></a
+            ><button type="button" class="custom_cursor">Contact</button></a
           >
         </div>
       </section>
       <!-- Section "Offre de réduction pour votre première commande" -->
       <section>
         <div class="container_contact">
-          <img src="html/image/Confort-Luxe-Macao-2_resultat.webp" alt="" />
+          <img
+            src="html/image/Confort-Luxe-Macao-2_resultat.webp"
+            alt="Salon de Confort luxueux"
+          />
           <div class="Contact">
             <h2>Offre de réduction pour votre première commande</h2>
             <p>s'abonner & obtenir plus</p>
             <div class="container_email">
               <input type="text" placeholder="votre email" />
-              <a href="#" id="custom_cursor"
+              <a href="#" class="custom_cursor"
                 ><i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
@@ -482,39 +483,41 @@
         </div>
       </section>
     </main>
-  </body>
-  <!-- Pied de page -->
-  <footer>
-    <div class="container_background_footer">
-      <div class="menu_footer">
-        <div class="about">
-          <h2 class="logo_footer">Interior</h2>
-          <p>
-            Dédié à l'art de créer des espaces intérieurs exceptionnels, où le
-            design rencontre la fonctionnalité. Explorez notre sélection unique
-            de meubles et d'idées inspirantes pour transformer votre intérieur
-            en une œuvre d'art vivante.
-          </p>
-          <p>www.interior.com</p>
-        </div>
-        <div class="nav_column">
-          <ul class="column">
-            <li class="title_bold">Menu</li>
-            <li>Produit</li>
-            <li>Rooms</li>
-            <li>Inspiration</li>
-            <li>À propos</li>
-          </ul>
-          <ul class="column">
-            <li class="title_bold">Compte</li>
-            <li>Mon Compte</li>
-            <li>Checkout</li>
-            <li>Ma Carte</li>
-            <li>Mon catalogue</li>
-          </ul>
+    <footer>
+      <div class="container_background_footer">
+        <div class="menu_footer">
+          <div class="about">
+            <h2 class="logo_footer">Interior</h2>
+            <p>
+              Dédié à l'art de créer des espaces intérieurs exceptionnels, où le
+              design rencontre la fonctionnalité. Explorez notre sélection
+              unique de meubles et d'idées inspirantes pour transformer votre
+              intérieur en une œuvre d'art vivante.
+            </p>
+            <p>www.interior.com</p>
+          </div>
+          <div class="nav_column">
+            <ul class="column">
+              <li class="title_bold">Menu</li>
+              <li>Produit</li>
+              <li>Rooms</li>
+              <li>Inspiration</li>
+              <li>À propos</li>
+            </ul>
+            <ul class="column">
+              <li class="title_bold">Compte</li>
+              <li>Mon Compte</li>
+              <li>Checkout</li>
+              <li>Ma Carte</li>
+              <li>Mon catalogue</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <div class="copyright"><p>Copyright &copy; 2023 Interior.com</p></div>
+      <div class="copyright"><p>Copyright &copy; 2023 Interior.com</p></div>
+    </footer>
+
+    <script defer src="script.js"></script>
+  </body>
+  <!-- Pied de page -->
 </html>
