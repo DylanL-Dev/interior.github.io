@@ -87,6 +87,7 @@ a {
 /* Style pour les images */
 img {
   object-fit: cover;
+  width: 100%;
 }
 
 /* Style pour la navigation */
