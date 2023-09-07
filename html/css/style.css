@@ -31,6 +31,11 @@ body {
      "overflow-x: hidden". */
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* Scroll Barre */
 
 /* Firefox */
@@ -88,7 +93,7 @@ header {
   background-color: #f8f8f8;
   padding: 20px 0;
 }
-
+/* Style principal desktop */
 .navbar_header {
   display: flex;
   justify-content: space-around;
@@ -717,22 +722,29 @@ p {
 }
 
 /* Style du champ de saisie à l'intérieur de "Contact" */
-.Contact input {
-  width: 40%;
+.container_email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
   height: 55px;
   border-radius: 35px;
   border: black solid 1px;
-  padding-left: 25px;
-  font-family: "Open Sans", sans-serif;
-  position: relative;
 }
 
-.arrow i {
-  position: absolute;
-  top: 71%;
-  left: 67%;
-  font-size: 25px;
-  color: black;
+.container_email input {
+  padding-left: 25px;
+  width: 80%;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.container_email .fa-arrow-right {
+  padding-right: 25px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.676);
 }
 
 /* Style du texte de l'attribut placeholder du champ de saisie */
@@ -823,7 +835,7 @@ a {
   .preloader {
     display: none; /* Masquer le préchargeur sur la version desktop */
   }
-  #myNav,
+  #myNav_mobile,
   .burger {
     display: none;
   }
@@ -845,6 +857,11 @@ a {
     /* En raison de la rotation appliquée à la zone d'annonce, la barre de défilement horizontale peut apparaître
        en cas de dépassement de contenu. Pour éviter cela, nous masquons la barre de défilement horizontale avec
        "overflow-x: hidden". */
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
   }
   .preloader {
     position: fixed;
@@ -1030,13 +1047,22 @@ a {
     font-size: 16px;
   }
 
-  .Contact input {
-    width: 50%;
+  .container_email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    height: 55px;
+    border-radius: 35px;
+    border: black solid 1px;
   }
 
-  .fa-arrow-right {
-    padding-top: 12px;
-    padding-left: 20px;
+  .container_email input {
+    padding-bottom: 0px;
+  }
+
+  .container_email .fa-arrow-right {
+    padding-bottom: 0%;
   }
 
   .about {
@@ -1052,6 +1078,10 @@ a {
     /* En raison de la rotation appliquée à la zone d'annonce, la barre de défilement horizontale peut apparaître
        en cas de dépassement de contenu. Pour éviter cela, nous masquons la barre de défilement horizontale avec
        "overflow-x: hidden". */
+  }
+
+  a {
+    text-decoration: none;
   }
   .navbar_header {
     display: none;
@@ -1258,7 +1288,7 @@ a {
     max-width: 95%;
     line-height: 45px;
   }
-  .carrousel_slider{
+  .carrousel_slider {
     display: none;
   }
 
@@ -1344,19 +1374,16 @@ a {
   .Contact p {
     display: none;
   }
-
-  .Contact input {
-    margin-top: 7%;
-    width: 70%;
-    height: 25%;
+  .container_email {
+    width: 75%;
   }
 
-  .arrow i {
-    position: absolute;
-    top: 67.5%;
-    left: 67%;
-    font-size: 25px;
-    color: rgba(0, 0, 0, 0.719);
+  .container_email input {
+    padding-bottom: 0px;
+  }
+
+  .container_email .fa-arrow-right {
+    padding-bottom: 0%;
   }
 
   .menu_footer {
