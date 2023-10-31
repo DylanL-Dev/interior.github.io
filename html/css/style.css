@@ -346,12 +346,12 @@ h3 {
 
 .flex_image img {
   width: 100%;
-  height: 100%; /* Utilise la hauteur disponible */
+  height: 100%; 
 }
 
 .flex_image1 {
   border-radius: 35px 0 35px 35px;
-  width: 100%; /* Prend la largeur complète de son conteneur */
+  width: 100%; 
 }
 
 .flex_image2 {
@@ -362,8 +362,8 @@ h3 {
 .card_flex {
   background-color: #fff0db;
   width: 100%;
-  max-width: 350px; /* Limite la largeur de la carte */
-  margin: 0 auto; /* Centre la carte horizontalement */
+  max-width: 350px; 
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -455,7 +455,7 @@ p {
   border-radius: 35px 0 0 35px;
 }
 
-/* Utilisation de max-width au lieu de hauteur fixe pour s'adapter aux écrans */
+
 .image_confort img {
   max-width: 100%;
   height: auto;
@@ -558,35 +558,36 @@ p {
   }
   100% {
     transform: translateX(
-      calc(-275px * 12)
-    ); /* Ajustez le nombre d'images ici et l'espace souhaité (275px dans cet exemple) */
+      calc(-200px * 7)
+    ); 
   }
 }
 
+
 /* Styling */
 .slider {
-  width: 100%; /* Ajuste la largeur du slider */
+  width: 100%; 
   overflow: hidden;
 }
 
 .slide-track {
-  animation: scroll 60s linear infinite;
+  animation: scroll 12s linear infinite;
   display: flex;
   width: calc(
     (250px + 25px) * 12
-  ); /* Ajustez le nombre d'images ici et l'espace souhaité (25px dans cet exemple) */
+  );
 }
 
 .slide {
   height: 400px;
   width: 250px;
-  margin-right: 25px; /* Espace entre les images (25px dans cet exemple) */
+  margin-right: 25px; 
 }
 
 .slide img {
   height: 400px;
-  width: 100%; /* Remplissez la largeur du conteneur parent */
-  object-fit: cover; /* Ajustez le comportement d'ajustement */
+  width: 100%; 
+  object-fit: cover; 
   border-radius: 20px;
 }
 
@@ -1070,6 +1071,10 @@ a {
 
   .about {
     padding-right: 180px;
+  }
+  #myNav_mobile,
+  .burger {
+    display: none;
   }
 }
 
